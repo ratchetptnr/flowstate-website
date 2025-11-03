@@ -1,10 +1,33 @@
+import { HeroSection } from './components/hero-section';
+import { ProblemSection } from './components/problem-section';
+import { SolutionSection } from './components/solution-section';
+import { HowItWorks } from './components/how-it-works';
+import { WhyFlowState } from './components/why-flowstate';
+import { WhatWeOffer } from './components/what-we-offer';
+import { WhereWeMeet } from './components/where-we-meet';
+import { WhoThisIsFor } from './components/who-this-is-for';
+import { FlowStatePromise } from './components/flowstate-promise';
+import { PricingSection } from './components/pricing-section';
+import { BookingAppSection } from './components/booking-app-section';
+import { FinalCTA } from './components/final-cta';
+import { Footer } from './components/footer';
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold">FlowState</h1>
-        <p>Welcome to FlowState - Building the website...</p>
-      </div>
+    <main className="w-full">
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <HowItWorks />
+      <WhyFlowState />
+      <WhatWeOffer />
+      <WhereWeMeet />
+      <WhoThisIsFor />
+      <FlowStatePromise />
+      <PricingSection />
+      <BookingAppSection />
+      <FinalCTA />
+      <Footer />
     </main>
   );
 }
