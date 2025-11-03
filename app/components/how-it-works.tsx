@@ -14,7 +14,7 @@ export function HowItWorks() {
     {
       number: 2,
       title: 'Show Up & Focus',
-      description: 'Bring your laptop and that project you've been avoiding. 3 hours of uninterrupted work with people who get it.',
+      description: "Bring your laptop and that project you've been avoiding. 3 hours of uninterrupted work with people who get it.",
       icon: Coffee,
     },
     {
