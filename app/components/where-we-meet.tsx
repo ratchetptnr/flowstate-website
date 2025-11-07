@@ -17,13 +17,13 @@ export function WhereWeMeet() {
   ];
 
   return (
-    <section className="w-full bg-slate-50 px-6 py-24">
+    <section className="w-full px-6 py-24" style={{ backgroundColor: '#EDECE8' }}>
       <div className="max-w-4xl mx-auto">
         <motion.div {...fadeInUp}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-slate-900">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8" style={{ color: '#415049' }}>
             Partner cafés that actually get it.
           </h2>
-          <p className="text-lg text-slate-600 mb-12">
+          <p className="text-lg mb-12" style={{ color: '#415049' }}>
             We don't rent spaces or build new ones. We work with cafés that already have the vibe—good coffee, comfortable seating, the right energy for getting work done.
           </p>
 
@@ -31,19 +31,18 @@ export function WhereWeMeet() {
             {cafes.map((cafe, index) => (
               <motion.div
                 key={index}
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-6 bg-white rounded-xl border border-slate-200"
+                className="flex items-center gap-4"
               >
-                <MapPin className="w-6 h-6 text-slate-700" />
+                <MapPin className="w-6 h-6" style={{ color: '#415049' }} />
                 <div>
-                  <h3 className="font-bold text-lg text-slate-900">{cafe.name}</h3>
-                  <p className="text-slate-600">{cafe.location}</p>
+                  <h3 className="font-bold text-lg" style={{ color: '#415049' }}>{cafe.name}</h3>
+                  <p style={{ color: '#415049' }}>{cafe.location}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          <p className="text-slate-500 italic">
+          <p className="italic" style={{ color: '#415049' }}>
             More locations coming soon. Want us at your favorite café? Let us know.
           </p>
         </motion.div>

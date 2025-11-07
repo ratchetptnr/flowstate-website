@@ -39,7 +39,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-24">
+    <section className="w-full px-6 py-24" style={{ backgroundColor: '#415049' }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="initial"
@@ -47,7 +47,7 @@ export function HowItWorks() {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-16 text-center text-slate-900">
+          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-16 text-center" style={{ color: '#EDECE8' }}>
             One task. Three hours. Zero excuses.
           </motion.h2>
 
@@ -58,11 +58,11 @@ export function HowItWorks() {
                 variants={fadeInUp}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-slate-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6" style={{ backgroundColor: '#EDECE8', color: '#415049' }}>
                   {step.number}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-slate-900">{step.title}</h3>
-                <p className="text-slate-600">{step.description}</p>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: '#EDECE8' }}>{step.title}</h3>
+                <p style={{ color: '#EDECE8' }}>{step.description}</p>
               </motion.div>
             ))}
           </div>

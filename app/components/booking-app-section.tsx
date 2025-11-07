@@ -116,7 +116,7 @@ export function BookingAppSection() {
   };
 
   return (
-    <section id="upcoming-sessions" className="w-full bg-slate-50 px-6 py-24">
+    <section id="upcoming-sessions" className="w-full px-6 py-24" style={{ backgroundColor: '#EDECE8' }}>
       <Script
         src="https://checkout.razorpay.com/v1/checkout.js"
         strategy="beforeInteractive"
@@ -124,13 +124,13 @@ export function BookingAppSection() {
 
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#415049' }}>
             Book Your Session
           </h2>
-          <p className="text-lg text-slate-600 mb-6">
+          <p className="text-lg mb-6" style={{ color: '#415049' }}>
             Select your preferred date and time. Sessions are available Monday to Friday.
           </p>
-          <div className="inline-block bg-slate-900 text-white px-6 py-2 rounded-full font-semibold">
+          <div className="inline-block px-6 py-2 rounded-full font-semibold" style={{ backgroundColor: '#7F654E', color: '#EDECE8' }}>
             ₹{SESSION_PRICE} per session
           </div>
         </div>

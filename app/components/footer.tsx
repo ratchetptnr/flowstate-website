@@ -34,9 +34,9 @@ export function Footer() {
   return (
     <>
       {/* FAQ Section */}
-      <section className="w-full bg-white px-6 py-24">
+      <section className="w-full px-6 py-24" style={{ backgroundColor: '#EDECE8' }}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-slate-900">
+          <h2 className="text-4xl font-bold mb-12 text-center" style={{ color: '#415049' }}>
             Frequently Asked Questions
           </h2>
 
@@ -45,13 +45,14 @@ export function Footer() {
               <Accordion.Item
                 key={index}
                 value={`item-${index}`}
-                className="bg-slate-50 rounded-xl overflow-hidden border border-slate-200"
+                className="rounded-xl overflow-hidden"
+                style={{ backgroundColor: '#EDECE8' }}
               >
-                <Accordion.Trigger className="w-full text-left px-6 py-4 font-semibold text-lg text-slate-900 hover:bg-slate-100 transition-colors flex justify-between items-center group">
+                <Accordion.Trigger className="w-full text-left px-6 py-4 font-semibold text-lg transition-colors flex justify-between items-center group" style={{ color: '#415049' }}>
                   {faq.q}
                   <span className="text-2xl group-data-[state=open]:rotate-45 transition-transform">+</span>
                 </Accordion.Trigger>
-                <Accordion.Content className="px-6 pb-4 text-slate-600 data-[state=open]:animate-slideDown">
+                <Accordion.Content className="px-6 pb-4 data-[state=open]:animate-slideDown" style={{ color: '#415049' }}>
                   {faq.a}
                 </Accordion.Content>
               </Accordion.Item>
@@ -61,32 +62,32 @@ export function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-slate-900 text-white px-6 py-16">
+      <footer className="w-full px-6 py-16" style={{ backgroundColor: '#415049' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">FlowState</h3>
-              <p className="text-slate-400">
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#EDECE8' }}>FlowState</h3>
+              <p style={{ color: '#EDECE8' }}>
                 Coworking sessions at Chennai's best cafés.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#upcoming-sessions" className="hover:text-white transition-colors">Upcoming Sessions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Partner Cafés</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <h4 className="font-semibold mb-4" style={{ color: '#EDECE8' }}>Quick Links</h4>
+              <ul className="space-y-2" style={{ color: '#EDECE8' }}>
+                <li><a href="#upcoming-sessions" className="hover:opacity-80 transition-opacity">Upcoming Sessions</a></li>
+                <li><a href="#" className="hover:opacity-80 transition-opacity">Partner Cafés</a></li>
+                <li><a href="#" className="hover:opacity-80 transition-opacity">FAQ</a></li>
+                <li><a href="#" className="hover:opacity-80 transition-opacity">Contact</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <div className="space-y-2 text-slate-400">
+              <h4 className="font-semibold mb-4" style={{ color: '#EDECE8' }}>Connect</h4>
+              <div className="space-y-2" style={{ color: '#EDECE8' }}>
                 <p className="flex items-center gap-2">
                   <Instagram className="w-4 h-4" />
-                  <a href="https://instagram.com/theflow.state" className="hover:text-white transition-colors">
+                  <a href="https://instagram.com/theflow.state" className="hover:opacity-80 transition-opacity">
                     @theflow.state
                   </a>
                 </p>
@@ -98,8 +99,8 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="border-t border-slate-800 pt-8">
-            <p className="text-sm text-slate-500">
+          <div className="border-t pt-8" style={{ borderColor: '#7F654E' }}>
+            <p className="text-sm" style={{ color: '#EDECE8' }}>
               Bookings are non-refundable but can be transferred to another session. Food credit valid only during your booked session. By booking, you agree to our session guidelines: phones on silent, respect others' focus time, clean up after yourself.
             </p>
           </div>

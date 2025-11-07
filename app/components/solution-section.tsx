@@ -29,7 +29,7 @@ export function SolutionSection() {
   ];
 
   return (
-    <section className="w-full bg-slate-50 px-6 py-24">
+    <section className="w-full px-6 py-24" style={{ backgroundColor: '#EDECE8' }}>
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial="initial"
@@ -37,11 +37,11 @@ export function SolutionSection() {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-8 text-slate-900">
+          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-8" style={{ color: '#415049' }}>
             What if cafés... but organized?
           </motion.h2>
 
-          <motion.div variants={fadeInUp} className="text-lg text-slate-600 space-y-4 mb-12">
+          <motion.div variants={fadeInUp} className="text-lg space-y-4 mb-12" style={{ color: '#415049' }}>
             <p>
               FlowState runs 3-hour coworking sessions at Chennai's best cafés. We're talking places with actual atmosphere, good coffee, and food that doesn't taste like cardboard.
             </p>
@@ -53,17 +53,16 @@ export function SolutionSection() {
             </p>
           </motion.div>
 
-          <motion.div variants={fadeInUp} className="grid md:grid-cols-2 gap-4">
+          <motion.div variants={fadeInUp} className="grid md:grid-cols-2 gap-6">
             {features.map((item, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.02 }}
-                className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-200 cursor-pointer"
+                className="flex items-start gap-4"
               >
-                <div className="p-2 bg-slate-100 rounded-lg">
-                  <item.icon className="w-6 h-6 text-slate-700" />
+                <div style={{ color: '#415049' }}>
+                  <item.icon className="w-6 h-6" />
                 </div>
-                <p className="text-lg text-slate-700 flex-1">{item.text}</p>
+                <p className="text-lg flex-1" style={{ color: '#415049' }}>{item.text}</p>
               </motion.div>
             ))}
           </motion.div>

@@ -40,7 +40,7 @@ export function WhatWeOffer() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-24">
+    <section className="w-full px-6 py-24" style={{ backgroundColor: '#415049' }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="initial"
@@ -48,20 +48,18 @@ export function WhatWeOffer() {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-16 text-center text-slate-900">
+          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-16 text-center" style={{ color: '#EDECE8' }}>
             Different sessions for different modes.
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {sessions.map((session, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ y: -5 }}
-                className="p-8 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition-all"
               >
-                <h3 className="text-2xl font-bold mb-4 text-slate-900">{session.title}</h3>
-                <p className="text-slate-600">{session.description}</p>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: '#EDECE8' }}>{session.title}</h3>
+                <p style={{ color: '#EDECE8' }}>{session.description}</p>
               </motion.div>
             ))}
           </div>

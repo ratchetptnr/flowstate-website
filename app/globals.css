@@ -2,20 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Supersonic Rocketship';
+  src: url('/fonts/supersonic-rocketship.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --border: 214.3 31.8% 91.4%;
-    --radius: 0.5rem;
+    /* FlowState Brand Colors */
+    /* #415049 - Deep Forest Green */
+    /* #EDECE8 - Warm Cream */
+    /* #7F654E - Coffee Brown */
+    /* #9EA792 - Sage Green */
+
+    --background: 30 14% 92%;           /* Warm cream #EDECE8 */
+    --foreground: 156 9% 28%;           /* Forest green #415049 */
+
+    --card: 0 0% 100%;                  /* White for cards */
+    --card-foreground: 156 9% 28%;      /* Forest green text */
+
+    --primary: 156 9% 28%;              /* Forest green #415049 */
+    --primary-foreground: 30 14% 92%;   /* Cream text on primary */
+
+    --secondary: 29 24% 40%;            /* Coffee brown #7F654E */
+    --secondary-foreground: 30 14% 92%; /* Cream text on secondary */
+
+    --accent: 93 12% 59%;               /* Sage green #9EA792 */
+    --accent-foreground: 156 9% 28%;    /* Forest green text on accent */
+
+    --muted: 93 12% 59%;                /* Sage green for muted elements */
+    --muted-foreground: 29 24% 40%;     /* Coffee brown for muted text */
+
+    --border: 93 12% 75%;               /* Lighter sage for borders */
+    --input: 93 12% 75%;                /* Sage for input borders */
+    --ring: 156 9% 28%;                 /* Forest green for focus rings */
+
+    --radius: 0.75rem;                  /* Slightly more rounded for organic feel */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Supersonic Rocketship', sans-serif;
   }
 }
 
@@ -26,12 +59,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: white;
+  background: hsl(var(--background));
   color: hsl(var(--foreground));
 }
 
@@ -45,14 +75,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: hsl(var(--muted));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: hsl(var(--primary));
 }

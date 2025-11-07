@@ -11,13 +11,13 @@ const fadeInUp = {
 
 export function WhoThisIsFor() {
   return (
-    <section className="w-full bg-white px-6 py-24">
+    <section className="w-full px-6 py-24" style={{ backgroundColor: '#415049' }}>
       <div className="max-w-4xl mx-auto">
         <motion.div {...fadeInUp}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-slate-900">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8" style={{ color: '#EDECE8' }}>
             If you've ever tried to work from your bed, this is for you.
           </h2>
-          <div className="text-lg text-slate-600 space-y-4">
+          <div className="text-lg space-y-4" style={{ color: '#EDECE8' }}>
             <p>
               Freelancers tired of pitching clients from their bedroom. Students who can't focus in the library. Remote workers who miss having coworkers. Entrepreneurs who need accountability. Anyone who's realized their house isn't really a workspace.
             </p>
