@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Shrikhand, Inter } from 'next/font/google';
 import './globals.css';
 
-const nunitoSans = localFont({
-  src: '../public/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf',
+const shrikhand = Shrikhand({
+  weight: '400',
+  subsets: ['latin'],
   display: 'swap',
-  variable: '--font-nunito-sans',
+  variable: '--font-shrikhand',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -36,7 +43,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={nunitoSans.className}>{children}</body>
+      <body className={`${inter.variable} ${shrikhand.variable} ${inter.className}`}>{children}</body>
     </html>
   );
 }

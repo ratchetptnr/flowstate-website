@@ -2,70 +2,36 @@
 
 import { motion } from 'framer-motion';
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5 }
-};
-
-const staggerContainer = {
-  initial: {},
-  whileInView: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  },
-  viewport: { once: true }
-};
-
 export function HowItWorks() {
-  const steps = [
-    {
-      number: "1",
-      title: "Book Your Spot",
-      description: "Pick a session at one of our partner cafés. ₹600 gets you in, ₹400 goes right back to you as credit for food and drinks."
-    },
-    {
-      number: "2",
-      title: "Show Up & Focus",
-      description: "Bring your laptop and that project you've been avoiding. 3 hours of uninterrupted work with people who get it."
-    },
-    {
-      number: "3",
-      title: "Actually Finish Something",
-      description: "Walk out with progress, not just plans. And maybe some new connections if you stuck around for the networking bit."
-    }
-  ];
-
   return (
-    <section className="w-full px-6 py-24" style={{ backgroundColor: '#415049' }}>
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true }}
-          variants={staggerContainer}
+    <section
+      className="relative min-h-screen flex flex-col p-16"
+      style={{ backgroundColor: '#E8F5E9' }}
+    >
+      {/* Top section with heading */}
+      <div className="mb-2">
+        <motion.h2
+          className="font-inter text-[28px] font-normal leading-[36px] max-w-3xl"
+          style={{ color: '#1C1C1C' }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-16 text-center" style={{ color: '#EDECE8' }}>
-            One task. Three hours. Zero excuses.
-          </motion.h2>
+          Join Chennai's most focused community
+          <br />
+          Where work actually happens
+        </motion.h2>
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="text-center"
-              >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6" style={{ backgroundColor: '#EDECE8', color: '#415049' }}>
-                  {step.number}
-                </div>
-                <h3 className="text-2xl font-bold mb-4" style={{ color: '#EDECE8' }}>{step.title}</h3>
-                <p style={{ color: '#EDECE8' }}>{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
+      {/* Center area for blob (placeholder) */}
+      <div className="flex-1 flex items-center justify-center my-12 w-full">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="w-full max-w-6xl h-96"
+        >
+          {/* Blob placeholder */}
         </motion.div>
       </div>
     </section>

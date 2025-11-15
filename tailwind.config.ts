@@ -7,6 +7,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        shrikhand: ['var(--font-shrikhand)'],
+        inter: ['var(--font-inter)'],
+      },
       colors: {
         // FlowState brand colors - use with CSS variables for theme consistency
         border: 'hsl(var(--border))',

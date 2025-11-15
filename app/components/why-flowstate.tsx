@@ -2,32 +2,59 @@
 
 import { motion } from 'framer-motion';
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5 }
-};
-
 export function WhyFlowState() {
+  const cafes = ['Sorocco', 'Summer House Eatery', 'HALT', 'CHAMIERS'];
+
   return (
-    <section className="w-full px-6 py-24" style={{ backgroundColor: '#EDECE8' }}>
-      <div className="max-w-4xl mx-auto">
-        <motion.div {...fadeInUp}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8" style={{ color: '#415049' }}>
-            Flow is that sweet spot between effort and ease.
-          </h2>
-          <div className="text-lg space-y-4 mb-8" style={{ color: '#415049' }}>
-            <p>
-              Most of us hit it by accident. But what if you could step into it on purpose?
-            </p>
-            <p>
-              This is about more than productivity apps and Pomodoro timers. It's about creating the conditions where deep work actually happens. Good space. Focused people. No distractions. Just you and the thing you came to do.
-            </p>
-          </div>
-          <blockquote className="border-l-4 pl-6 py-4 italic text-xl" style={{ borderColor: '#415049', color: '#415049' }}>
-            "Co-working? Nah, co-dependant working only in Namma Chennai rn &lt;3"
-          </blockquote>
+    <section
+      className="relative min-h-screen flex flex-col p-16"
+      style={{ backgroundColor: '#E8F5E9' }}
+    >
+      {/* Top section with heading */}
+      <div className="mb-2">
+        <motion.h2
+          className="font-inter text-[28px] font-normal leading-[36px] max-w-3xl"
+          style={{ color: '#1C1C1C' }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Our cafe partners...
+        </motion.h2>
+      </div>
+
+      {/* Middle section with cafe names */}
+      <div className="flex-1 flex items-center justify-center my-12 w-full">
+        <motion.div
+          className="flex flex-wrap justify-center gap-x-16 gap-y-8 w-full max-w-6xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {cafes.map((cafe, index) => (
+            <motion.div
+              key={cafe}
+              className="font-inter text-[28px] font-normal"
+              style={{ color: '#1C1C1C' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+            >
+              {cafe}
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Bottom blob area (placeholder) */}
+      <div className="w-full h-64">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="w-full h-full"
+        >
+          {/* Blob placeholder */}
         </motion.div>
       </div>
     </section>
