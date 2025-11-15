@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ResponsiveBlob } from './responsive-blob';
 
 export function SolutionSection() {
   return (
@@ -23,28 +24,17 @@ export function SolutionSection() {
         </motion.h2>
       </div>
 
-      {/* Center area for blob (placeholder) */}
-      <div className="flex-1 flex items-center justify-center my-12 w-full">
+      {/* Center area with same blob as hero */}
+      <div className="flex-1 flex items-center justify-center my-12 w-full overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-full max-w-6xl h-96"
+          className="w-full max-w-6xl h-[400px]"
         >
-          {/* Blob placeholder */}
+          <ResponsiveBlob />
         </motion.div>
       </div>
-
-      {/* Headline at bottom */}
-      <motion.h2
-        className="font-inter text-[28px] font-normal leading-[36px] max-w-3xl"
-        style={{ color: '#1C1C1C' }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        3-hour coworking sessions at Chennai's best cafés. Come alone, work with others, actually get shit done.
-      </motion.h2>
     </section>
   );
 }

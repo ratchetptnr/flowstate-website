@@ -60,12 +60,12 @@ export function HeroSection() {
       </div>
 
       {/* Center responsive blob */}
-      <div className="flex-1 flex items-center justify-center my-12 w-full">
+      <div className="flex-1 flex items-center justify-center my-12 w-full overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-full max-w-6xl h-96"
+          className="w-full max-w-6xl h-[400px]"
         >
           <ResponsiveBlob />
         </motion.div>

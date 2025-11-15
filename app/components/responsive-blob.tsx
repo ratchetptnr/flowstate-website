@@ -33,25 +33,26 @@ export function ResponsiveBlob({ imageSrc = '/gradient.png' }: ResponsiveBlobPro
       let waves = 1;
       let scale = 1;
 
-      // Try to fill width with minimal waves by scaling up first
+      // Try to fill space by both adding waves and scaling up
+      // Scale aggressively to fill both width and height
       if (containerWidth <= 400) {
         waves = 1;
-        scale = Math.min(containerWidth / baseWaveWidth, containerHeight / baseWaveHeight);
+        scale = Math.min(containerWidth / baseWaveWidth, containerHeight / baseWaveHeight) * 1.8;
       } else if (containerWidth <= 600) {
         waves = 2;
-        scale = Math.min(containerWidth / (baseWaveWidth * 1.5), containerHeight / baseWaveHeight);
+        scale = Math.min(containerWidth / (baseWaveWidth * 1.5), containerHeight / baseWaveHeight) * 2.0;
       } else if (containerWidth <= 900) {
         waves = 3;
-        scale = Math.min(containerWidth / (baseWaveWidth * 2), containerHeight / baseWaveHeight);
+        scale = Math.min(containerWidth / (baseWaveWidth * 2), containerHeight / baseWaveHeight) * 2.2;
       } else if (containerWidth <= 1200) {
         waves = 4;
-        scale = Math.min(containerWidth / (baseWaveWidth * 2.5), containerHeight / baseWaveHeight);
+        scale = Math.min(containerWidth / (baseWaveWidth * 2.5), containerHeight / baseWaveHeight) * 2.4;
       } else if (containerWidth <= 1600) {
         waves = 5;
-        scale = Math.min(containerWidth / (baseWaveWidth * 3), containerHeight / baseWaveHeight);
+        scale = Math.min(containerWidth / (baseWaveWidth * 3), containerHeight / baseWaveHeight) * 2.6;
       } else {
         waves = 6;
-        scale = Math.min(containerWidth / (baseWaveWidth * 3.5), containerHeight / baseWaveHeight);
+        scale = Math.min(containerWidth / (baseWaveWidth * 3.5), containerHeight / baseWaveHeight) * 2.8;
       }
 
       // Wave spacing (overlap for union effect)

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { DistractionBlob } from './blobs/distraction-blob';
 
 export function ProblemSection() {
   return (
@@ -23,15 +24,15 @@ export function ProblemSection() {
         </motion.h2>
       </div>
 
-      {/* Center area for blobs (placeholder) */}
-      <div className="flex-1 flex items-center justify-center my-12 w-full">
+      {/* Center area with broken blob */}
+      <div className="flex-1 flex items-center justify-center my-12 w-full overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-full max-w-6xl h-96"
+          className="w-full max-w-6xl h-[400px]"
         >
-          {/* Blob placeholder */}
+          <DistractionBlob />
         </motion.div>
       </div>
     </section>

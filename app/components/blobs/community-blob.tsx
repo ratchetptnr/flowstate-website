@@ -1,63 +1,52 @@
-export function CommunityBlob() {
+interface CommunityBlobProps {
+  imageSrc?: string;
+}
+
+export function CommunityBlob({ imageSrc = '/gradient.png' }: CommunityBlobProps) {
   return (
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 1200 400"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="xMidYMid meet"
-    >
-      <defs>
-        <radialGradient id="cluster1Gradient" cx="50%" cy="50%">
-          <stop offset="0%" stopColor="#2CAAC9" />
-          <stop offset="60%" stopColor="#FFA726" />
-          <stop offset="100%" stopColor="#78909C" />
-        </radialGradient>
-        <radialGradient id="cluster2Gradient" cx="50%" cy="50%">
-          <stop offset="0%" stopColor="#FFA726" />
-          <stop offset="50%" stopColor="#2CAAC9" />
-          <stop offset="100%" stopColor="#78909C" />
-        </radialGradient>
-        <radialGradient id="cluster3Gradient" cx="50%" cy="50%">
-          <stop offset="0%" stopColor="#FFA726" />
-          <stop offset="40%" stopColor="#78909C" />
-          <stop offset="100%" stopColor="#2CAAC9" />
-        </radialGradient>
-        <filter id="blur">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="25" />
-        </filter>
-      </defs>
+    <div className="w-full h-full flex items-center justify-center">
+      <svg
+        viewBox="0 0 1372 363"
+        className="w-full h-full"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          {/* Use Community.svg path as clip path mask */}
+          <clipPath id="communityMask">
+            <path d="M706.817 36.9304C737.681 4.45915 785.723 -9.02564 830.922 6.34058C892.884 27.4061 926.039 94.7138 904.973 156.677L862.485 281.652C841.42 343.615 774.112 376.768 712.149 355.703C693.309 349.298 677.132 338.617 664.333 325.112C633.469 357.583 585.428 371.069 540.229 355.703C478.267 334.637 445.113 267.33 466.179 205.367L508.667 80.3914C529.732 18.4287 597.04 -14.725 659.003 6.34058C677.842 12.7456 694.018 23.4257 706.817 36.9304ZM1166.66 36.9304C1197.52 4.45897 1245.56 -9.02582 1290.76 6.34058C1352.72 27.4063 1385.88 94.7139 1364.81 156.677L1322.32 281.652C1301.26 343.615 1233.95 376.768 1171.99 355.703C1153.15 349.298 1136.97 338.616 1124.17 325.111C1093.31 357.583 1045.27 371.069 1000.07 355.703C938.106 334.637 904.952 267.33 926.017 205.367L968.506 80.3914C989.571 18.4286 1056.88 -14.725 1118.84 6.34058C1137.68 12.7455 1153.86 23.4257 1166.66 36.9304ZM246.977 36.9294C277.841 4.45771 325.884 -9.02774 371.083 6.33862C433.046 27.4042 466.199 94.7128 445.134 156.676L402.646 281.65C381.581 343.613 314.272 376.767 252.309 355.701C233.469 349.296 217.293 338.615 204.494 325.11C173.63 357.582 125.589 371.067 80.3895 355.701C18.4267 334.635 -14.7269 267.328 6.33868 205.365L48.826 80.3904C69.8916 18.4276 137.2 -14.7269 199.163 6.33862C218.003 12.7436 234.178 23.4246 246.977 36.9294Z" />
+          </clipPath>
 
-      {/* Left cluster blob */}
-      <ellipse
-        cx="250"
-        cy="200"
-        rx="180"
-        ry="200"
-        fill="url(#cluster1Gradient)"
-        filter="url(#blur)"
-      />
+          {/* Gradient image pattern */}
+          <pattern
+            id="communityGradient"
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            patternUnits="objectBoundingBox"
+          >
+            <image
+              href={imageSrc}
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+            />
+          </pattern>
+        </defs>
 
-      {/* Middle cluster blob */}
-      <ellipse
-        cx="600"
-        cy="200"
-        rx="200"
-        ry="220"
-        fill="url(#cluster2Gradient)"
-        filter="url(#blur)"
-      />
-
-      {/* Right cluster blob */}
-      <ellipse
-        cx="950"
-        cy="200"
-        rx="190"
-        ry="210"
-        fill="url(#cluster3Gradient)"
-        filter="url(#blur)"
-      />
-    </svg>
+        {/* Apply gradient image with Community.svg as mask - static */}
+        <rect
+          x="0"
+          y="0"
+          width="1372"
+          height="363"
+          fill="url(#communityGradient)"
+          clipPath="url(#communityMask)"
+        />
+      </svg>
+    </div>
   );
 }

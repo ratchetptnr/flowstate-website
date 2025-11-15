@@ -43,7 +43,7 @@ export function Footer() {
 
       {/* Bottom disclaimer text */}
       <motion.p
-        className="font-inter text-[16px] font-normal leading-[24px] max-w-5xl"
+        className="font-inter text-[16px] font-normal leading-[24px]"
         style={{ color: '#1C1C1C' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
